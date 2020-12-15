@@ -1,0 +1,121 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+  
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,600,500,300,200,100,800);
+
+section{
+    padding:60px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    color: #4C4C4C;
+    word-spacing: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom:30px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+.ion-minus{
+    padding:0px 10px;
+
+}
+
+#blog{
+  background-color:#f6f6f6;
+}
+
+#blog .blog.column a{
+  color:#5db4c0;
+
+  text-decoration:none;
+}
+
+#blog img:hover {
+  opacity:0.8; 
+}
+
+
+#blog p{
+  min-width: 300px;
+  max-width: 300px;
+}
+#more_p{
+    text-align: center;
+    font-size: 100%;
+    font-weight: 600;
+    font-style: italic;
+
+    
+}
+
+
+</style>
+
+<section id="blog">
+   <header class="section-header">
+          <h3>Collections</h3>
+          <br><br>
+
+      <div class="container">
+    
+       
+                
+        <div class="row">
+            {% for d in collect %}
+               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 shadow-lg p-3 mb-5 bg-white " data-aos="fade-right">
+
+                    <div class="blog column text-center">
+
+                        <img src="{{d.place_link}}" alt="" width="350px" height="250px">
+                        <a class="source" href="{{d.place_link}}"><h5>image source</h5></a>
+
+                        <h2>{{d.place_name}}</h2>
+
+                        <a href="{{d.map}}">map</a>
+                        <p>{{d.description}} <br><br> {{d.state}} <br>{{d.district}}</p>
+
+
+                        
+                    </div>
+                </div>
+                   {% endfor %}
+
+</div>
+</div>
+
+</section>
+
+
+    </section> 
+
+<!-- #services -->
+
+<div class="container">
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+
+    <li class="page-item">
+      
+      {% for i in paginator.page_range %}
+     
+    </li>
+    <li class="page-item {% if i == page_number %} active {% endif %}"><a class="page-link" href="?page={{ i }}">{{i}}</a></li>
+    {% endfor %}
+    
+</nav>
+    </li>
+    <p id="more_p">New places are coming soon...</p>
+  </ul>
+</div>
+{% endblock %}

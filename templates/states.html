@@ -1,0 +1,264 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %} 
+
+
+  <style>
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px 0;
+}
+
+img {
+    width:100%;
+
+    vertical-align: middle;
+  
+}
+
+.blog-item img {
+  display: block;
+}
+
+.blog-item a {
+    display: flex;
+    padding: 30px;
+    overflow: hidden;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.blog-item a:hover {
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.blog-item .icon {
+    width: 45%;
+    object-fit: cover;
+    margin-right: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
+}
+
+.blog-item .content {
+    width: 35%;
+}
+
+.blog-item .content .title {
+    font-size: 21px;
+    text-transform: capitalize;
+    color: #25aae1;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.blog-item .content .title .blog-date {
+    font-size: 12px;
+    margin-left: 20px;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+.blog-item .content .title .blog-date:before {
+    content: '/';
+    color: #2bb673;
+    font-size: 25px;
+    top: auto;
+    position: relative;
+    margin-right: 10px;
+}
+
+.blog-item .content .rounded {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-item .item-arrow {
+    height: 20px;
+    width: 15%;
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    left: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.blog-item a:hover > .item-arrow {
+    /*padding-left: 40px;*/
+    color: #25aae1;
+    left: 30px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.rounded {
+    width: 70px;
+    height: 5px;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #25aae1, #40e495);
+    /* background: #2bb769; */
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+
+    .blog-item .content {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .blog-item .content .title {
+        font-size: 18px;
+    }
+
+    .blog-item .item-arrow {
+        margin: auto;
+    }
+
+    .blog-item .icon {
+        width: 100%;
+    }
+
+    .blog-item .icon img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .blog-item {
+        width: 92%;
+        margin: auto;
+    }
+
+    .blog-item a {
+        display: block;
+        padding: 30px;
+    }
+
+}
+
+#header_bg_img{
+   padding: 30px 10px;  
+   /*width: 100%;*/
+   /*background: url("{% static 'img/img_cover.jpg' %}");*/
+   /*background-color: lightblue;*/
+   background-image: url("{% static 'img/img_cover.jpg' %}");
+   background-repeat: no-repeat;
+   /*background-size: auto;*/
+   background-size: 100% 100%;
+   height: 50%;
+
+}
+#text_design{
+  /*color: #e52165;*/
+  color:   #b85042;
+  /*float: right;*/
+  /*margin:  30px;*/
+  margin-top: 20px;
+  text-align: center;
+  font-size: 300%;
+  text-shadow: 2px 2px #fff;
+}
+
+  </style>
+
+
+
+
+    <section id="about">
+       <header id="header_bg_img" class="section-header">
+        <br>
+          <h3 id="text_design" class="text-uppercase"><b>{{name}}</b></h3>
+
+         
+          <div class="align-bottom">
+          <p></p></div>
+              
+        </header>
+
+
+      <div class="container">
+        <!-- <div class="row"> -->
+
+<br><br>
+<ul>
+  {% for d in search %}
+
+
+
+  <div class="blog-item">
+    <a href="{{d.map}}">
+        <div class="icon">
+            <img class="img_season" src="{{d.place_link}}" alt="">
+        </div>
+        <div class="content">
+            <div class="title">{{d.place_name}}  <span class="blog-date">{{d.district}}</span></div>
+            <div class="rounded"></div>
+
+            <p>
+                {{d.description}}
+            </p>
+        </div>
+
+        <div class="item-arrow">
+            <h4>MAP
+            <i class="fa fa-map-marker" aria-hidden="true"></i></h4>
+
+        </div>
+    </a>
+
+</div>
+
+
+
+
+      {% endfor %}
+</ul>
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+</form>
+
+</section> 
+
+
+
+{% endblock %}
+
+
+  
+

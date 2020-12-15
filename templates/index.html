@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+<style>
+  
+.responsive {
+  width: 60%;
+  margin-left: 20%;
+  font-family: "Open Sans", sans-serif;
+  height: auto;
+}
+#head_main{
+
+  text-align: center;
+  font-size: 300%;
+  font-weight: 900;
+}
+#head_main1{
+
+  text-align: center;
+  font-size: 300%;
+  font-weight: 500;
+}
+#style_p{
+  width: 60%;
+  margin-left: 20%;
+  font-weight: bold;
+  text-align: center;
+}
+#style_map{
+  font-size: 20px;
+}
+
+#header_bg_img{
+   padding: 40px 10px;  
+   background-image: url("{% static 'img/img_main.jpg' %}");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   height: 200px;
+
+}
+#text_design{
+  color: white;
+  /*float: right;*/
+  margin:  -16px;
+  font-size: 50px;
+  text-shadow: 2px 2px black;
+
+}
+
+
+</style>
+
+
+
+  <meta charset="utf-8">
+  <title>MAPTOMYDESTINATION.COM</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="Top places in india" name="description">
+  <meta content="place, seasons, adventure places, wildlife, honeymoon places, must visit places" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="{% static 'img/favicon.png' %}" rel="icon"> -->
+  <!-- <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- <link href="{% static 'css/main_collection_box.css' %}" rel="stylesheet"> -->
+
+
+
+  <!-- bootstrap -->
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"> 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+
+
+
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+
+
+   
+    <div class="container">
+
+      <div class="logo float-left">
+    
+
+
+          <link rel ="icon" href ="{% static 'img/logo_map.png' %}" 
+        type = "image/x-icon">
+
+      
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li class="drop-down"><a href="#">SEASONS IN <span>INDIA</span></a>
+            <ul>
+              <li><a name="season" href="season?query_name=spring">SPRING</a></li>
+              <li><a name="season" href="season?query_name=summer">SUMMER</a></li>
+              <li><a name="season" href="season?query_name=monsoon">MONSOON</a></li>
+              <li><a name="season" href="season?query_name=antumn">ANTUMN</a></li>
+              <li><a name="season" href="season?query_name=winter">WINTER</a></li> 
+            </ul>
+          </li>
+
+         
+          <li class="drop-down"><a href="#">Your  <span>choice</span></a>
+            <ul>
+              <li><a name="type" href="type?query_name=honeymoon">HONEYMOON</a></li>
+              <li><a name="type" href="type?query_name=WILDLIFE">WILDLIFE</a></li>
+              <li><a name="type" href="type?query_name=HILL STATION">HILL STATION</a></li>
+              <li><a name="type" href="type?query_name=ADVENTURE">ADVENTURE</a></li>
+            </ul>
+          </li>
+
+          <li class="drop-down"><a href="#">States</a>
+            <ul>
+              <li class="drop-down"><a href="#">A - C</a>
+                <ul>
+                  
+                  <li><a name="states" href="states?query_name=Andhra Pradesh">Andhra Pradesh</a></li>
+                  <li><a name="states" href="states?query_name=Arunachal Pradesh">Arunachal Pradesh</a></li>
+                  <li><a name="states" href="states?query_name=Assam">Assam</a></li>
+                  <li><a name="states" href="states?query_name=Bihar">Bihar </a></li>
+                  <li><a name="states" href="states?query_name=Chhattisgarh">Chhattisgarh</a></li>
+                </ul>
+              </li>
+                <li class="drop-down"><a href="#">D - H</a>
+                <ul>
+                  <li><a name="states" href="states?query_name=Goa">Goa</a></li>
+                  <li><a name="states" href="states?query_name=Gujarat">Gujarat</a></li>
+                  <li><a name="states" href="states?query_name=Haryana">Haryana</a></li>
+                  <li><a name="states" href="states?query_name=Himachal">Himachal Pradesh</a></li>
+                  
+                </ul>
+              </li>
+               <li class="drop-down"><a href="#">I - K</a>
+                <ul>
+                  <li><a name="states" href="states?query_name=Jammu & Kashmir">Jammu & Kashmir</a></li>
+                  <li><a name="states" href="states?query_name=Jharkhand">Jharkhand</a></li>
+                  <li><a name="states" href="states?query_name=Karnataka">Karnataka</a></li>
+                  <li><a name="states" href="states?query_name=Kerala">Kerala</a></li>
+                  
+                </ul>
+              </li>
+               <li class="drop-down"><a href="#">L - N</a>
+                <ul>
+                  <li><a name="states" href="states?query_name=Madhya Pradesh">Madhya Pradesh</a></li>
+                  <li><a name="states" href="states?query_name=Maharashtra">Maharashtra</a></li>
+                  <li><a name="states" href="states?query_name=Manipur">Manipur</a></li>
+                  <li><a name="states" href="states?query_name=Meghalaya">Meghalaya</a></li>
+                  <li><a name="states" href="states?query_name=Mizoram">Mizoram</a></li>
+                  <li><a name="states" href="states?query_name=Nagaland">Nagaland</a></li>
+                  
+                </ul>
+              </li>
+               <li class="drop-down"><a href="#">O - S</a>
+                <ul>
+                  <li><a name="states" href="states?query_name=Odisha">odisha</a></li>
+                  <li><a name="states" href="states?query_name=Punjab">Punjab</a></li>
+                  <li><a name="states" href="states?query_name=Rajasthan">Rajasthan</a></li>
+                  <li><a name="states" href="states?query_name=Sikkim">Sikkim</a></li>
+                  
+                </ul>
+              </li>
+               <li class="drop-down"><a href="#">T - Z</a>
+                <ul>
+                  <li><a name="states" href="states?query_name=Tamil Nadu">Tamil Nadu</a></li>
+                  <li><a name="states" href="states?query_name=Telangana">Telangana</a></li>
+                  <li><a name="states" href="states?query_name=Tripura">Tripura</a></li>
+                  <li><a name="states" href="states?query_name=Uttar Pradesh">Uttar Pradesh </a></li>
+                  <li><a name="states" href="states?query_name=Uttarakhand">Uttarakhand</a></li>
+                  <li><a name="states" href="states?query_name=West Bengal">West Bengal</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </li>
+            
+          
+
+          <li><a href="collection">Collections</a></li>
+          
+          
+
+  
+         
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+  
+{% block content %}
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+
+   
+          <h2><span>MAP-TO-MY</span><br><b>DESTINATION</b><br><span>INDIA</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">top places in india</a>&nbsp; &nbsp; <br><br> 
+            <a href="collection" class="btn-get-started scrollto">Collection</a>            
+          </div><br>  
+          <h4>LET'S EXPLORE <Span>INDIA</Span></h4>
+         
+
+          </a>
+
+
+
+          
+          
+
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+
+          <img src="{% static 'img/intro-img.svg' %}" alt="" class="img-fluid">
+
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+        </div>
+      </div>
+
+
+    </div>
+  </section><!-- #intro -->
+
+  
+
+    <!--==========================
+      About Us Section
+    ============================-->
+
+
+
+<section id="about">
+
+   
+
+
+
+  <header id="header_bg_img" class="section-header">
+        <br>
+          <h3 id="text_design" class="text-uppercase">TOP <b>50</b> PLACES IN <br><b>INDIA</b><br></h3>
+         
+          <div class="align-bottom">
+          <p></p></div>
+              
+        </header><br><br>
+
+
+{% for d in list %}
+     
+
+<div class="container_vsnm">
+ 
+<h3 id="head_main1">{{d.number}}</h3>
+
+<h2 id="head_main" class="text-uppercase">{{d.t_list}}</h2>
+<p id="style_p">{{d.district}} , {{d.state}}</p><br>
+
+
+<img src="{{d.t_link}}"  class="responsive" width="600" height="400"><br><br>
+<div id="style_p">
+<p>{{d.t_description}}</p>
+<a id="style_map" href="{{d.t_map}}">MAP</a><br><br><br>
+</div>
+ 
+  </div>
+
+  
+
+    
+  
+  
+  {% endfor %} 
+
+
+</section>
+
+  
+
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+
+    <main id="main">
+
+    <section id="services" class="section-bg">
+      <div class="container">
+
+       
+
+   
+
+ 
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+       
+
+          <div class="col-lg-6">
+
+            <div class="form">
+              
+              <h2>CONTACT US</h2>
+            
+              <form id="submit-form" action="" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+
+                
+
+                <div class="text-center"><button type="submit" title="Send Message">Send</button></div>
+              </form>
+            </div>
+
+      </div>
+    </div>
+</div>
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+
+
+    {% endblock %}
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxKwgQYXUoSgMzc8xng7hKkzMqdngVjPYIHnzI8MA/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
